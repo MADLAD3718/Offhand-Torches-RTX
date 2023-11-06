@@ -1,0 +1,36 @@
+{
+    "format_version": 2,
+	"metadata": { "authors": ["ItsDrCat", "MADLAD3718"] },
+    "header": {
+        "name": "Offhand Torches RTX",
+		"description": "An addon implementing custom torches that remain functional while held in the offhand.",
+        "min_engine_version": [1,20,40],
+        "uuid": "cfeec682-d608-4565-b02c-06ab61707f88",
+        "version": [1,0,0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "593b01d4-f00b-47f9-9f9f-fa18c8838b84",
+            "version": [1,0,0]
+        },
+        {
+            "type": "script",
+            "description": "Offhand Torches RTX Script API Code",
+            "uuid": "e1837d4b-9221-4b25-a1e4-5337a9342db0",
+            "language": "javascript",
+            "entry": "scripts/main.js",
+            "version": [1,0,0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "e9cb50c1-bbe9-489a-8faf-7fdb42e04fa3",
+            "version": [1,0,0]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": [1,6,0]
+        }
+    ]
+}
