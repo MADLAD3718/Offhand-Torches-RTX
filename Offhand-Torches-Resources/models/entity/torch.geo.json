@@ -2,7 +2,7 @@
 	"format_version": "1.16.0",
 	"minecraft:geometry": [{
 		"description": {
-			"identifier": "geometry.offt.torch",
+			"identifier": "geometry.ofht.torch",
 			"texture_width": 16,
 			"texture_height": 16,
 			"visible_bounds_width": 10,
