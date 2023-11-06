@@ -11,7 +11,7 @@
 				"default": "textures/entity/torch_on",
 				"enchanted": "textures/misc/enchanted_item_glint"
 			},
-			"geometry": { "default": "geometry.glowingitems.torch" },
+			"geometry": { "default": "geometry.ofht.torch" },
 			"animations": {
 				"hold_first_person": "animation.torch.hold_first_person",
 				"hold_first_person_offhand": "animation.torch.hold_first_person_offhand",
