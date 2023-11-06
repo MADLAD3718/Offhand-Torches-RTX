@@ -2,11 +2,13 @@
 	"format_version": "1.20.40",
 	"minecraft:item": {
 		"description": {
-			"identifier": "offt:torch",
+			"identifier": "ofht:torch",
 			"menu_category": { "category": "items" }
 		},
 		"components": {
-			"minecraft:icon": { "texture": "torch" }
+			"minecraft:icon": { "texture": "torch" },
+			"minecraft:block_placer": { "block": "ofht:torch_block" },
+			"minecraft:allow_off_hand": { "value": true }
 		}
 	}
 }

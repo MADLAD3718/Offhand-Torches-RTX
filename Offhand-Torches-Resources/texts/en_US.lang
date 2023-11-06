@@ -1,1 +1,2 @@
-item.offt:torch=Torch
+item.ofht:torch=Torch
+tile.ofht:torch_block.name=Torch Block

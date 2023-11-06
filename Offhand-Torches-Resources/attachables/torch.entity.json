@@ -2,7 +2,7 @@
 	"format_version": "1.10.0",
 	"minecraft:attachable": {
 		"description": {
-			"identifier": "offt:torch",
+			"identifier": "ofht:torch",
 			"materials": {
 				"default": "entity_emissive_alpha",
 				"enchanted": "entity_alphatest_glint"
