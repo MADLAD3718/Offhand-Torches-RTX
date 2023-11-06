@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.torch.hold_first_person": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [104.10956, 53.58013, -33.08958],
+					"position": [24, 25, 30],
+					"scale": 4.5
+				}
+			}
+		},
+		"animation.torch.hold_third_person": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [70, 0, 0],
+					"position": [0, 22, -1.5],
+					"scale": 1.2
+				}
+			}
+		},
+		"animation.torch.hold_first_person_offhand": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [186.20643, 8.55708, 185.76548],
+					"position": [-31, -5, 31],
+					"scale": 4.5
+				}
+			}
+		}
+	}
+}

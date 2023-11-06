@@ -1,0 +1,6 @@
+{
+    "resource_pack_name": "offt",
+    "texture_data": {
+        "torch": { "textures": "textures/blocks/torch_on" }
+    }
+}
