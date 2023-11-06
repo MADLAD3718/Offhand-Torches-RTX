@@ -1,5 +1,8 @@
 import { Block, ItemStack, world, PlayerBreakBlockAfterEvent, PlayerInteractWithBlockAfterEvent, ItemUseOnBeforeEvent } from "@minecraft/server";
 import { add, toVec3, toVector } from "./vectors";
+import { filterChunks } from "./chunk_filter";
+
+filterChunks();
 
 world.beforeEvents.itemUseOn.subscribe(filterTorchPlacement);
 /** @param {ItemUseOnBeforeEvent} event  */

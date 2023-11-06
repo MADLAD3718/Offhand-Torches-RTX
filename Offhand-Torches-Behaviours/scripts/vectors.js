@@ -1,5 +1,6 @@
-import { Direction } from "@minecraft/server";
 /** @typedef {{x: Number, y: Number, z: Number}} Vector3 */
+
+import { Direction } from "@minecraft/server";
 
 /**
  * Enum for directions.
@@ -50,6 +51,19 @@ export function toVec3(x) {
 }
 
 /**
+ * Floors all the components of `v`.
+ * @param {Vector3} v 
+ * @returns {Vector3}
+ */
+export function floor(v) {
+    return {
+        x: Math.floor(v.x),
+        y: Math.floor(v.y),
+        z: Math.floor(v.z)
+    };
+}
+
+/**
  * Returns the vector addition `u` + `v`.
  * @param {Vector3} u 
  * @param {Vector3} v 
@@ -61,4 +75,56 @@ export function add(u, v) {
         y: u.y + v.y,
         z: u.z + v.z
     };
+}
+
+/**
+ * Returns the vector subtraction `u` - `v`.
+ * @param {Vector3} u 
+ * @param {Vector3} v 
+ * @returns {Vector3}
+ */
+export function sub(u, v) {
+    return {
+        x: u.x - v.x,
+        y: u.y - v.y,
+        z: u.z - v.z
+    };
+}
+
+/**
+ * Returns the component-wise multiplication of `u` and `v`.
+ * @param {Vector3} u 
+ * @param {Vector3 | Number} v 
+ * @returns {Vector3}
+ */
+export function mul(u, v) {
+    if (typeof v == "number") return {
+        x: u.x * v,
+        y: u.y * v,
+        z: u.z * v
+    }
+    return {
+        x: u.x * v.x,
+        y: u.y * v.y,
+        z: u.z * v.z
+    }
+}
+
+/**
+ * Returns the component-wise division of `u` and `v`.
+ * @param {Vector3} u 
+ * @param {Vector3 | Number} v 
+ * @returns {Vector3}
+ */
+export function div(u, v) {
+    if (typeof v == "number") return {
+        x: u.x / v,
+        y: u.y / v,
+        z: u.z / v
+    }
+    return {
+        x: u.x / v.x,
+        y: u.y / v.y,
+        z: u.z / v.z
+    }
 }

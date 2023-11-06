@@ -23,7 +23,8 @@
 				"max_lifetime": "Math.random(0.2, 1.6)"
 			},
 			"minecraft:particle_motion_dynamic": {
-				"linear_acceleration": [0, 0.8, 0]
+				"linear_acceleration": [0, 0.8, 0],
+				"linear_drag_coefficient": 0.5
 			},
 			"minecraft:particle_appearance_billboard": {
 				"size": [0.1, 0.1],
