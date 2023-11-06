@@ -1,5 +1,15 @@
-import { Block, ItemStack, world, PlayerBreakBlockAfterEvent, PlayerInteractWithBlockAfterEvent } from "@minecraft/server";
-import { add, toVec3 } from "./vectors";
+import { Block, ItemStack, world, PlayerBreakBlockAfterEvent, PlayerInteractWithBlockAfterEvent, ItemUseOnBeforeEvent } from "@minecraft/server";
+import { add, toVec3, toVector } from "./vectors";
+
+world.beforeEvents.itemUseOn.subscribe(filterTorchPlacement);
+/** @param {ItemUseOnBeforeEvent} event  */
+function filterTorchPlacement(event) {
+    const {block, blockFace} = event;
+    if (event.itemStack.typeId != "ofht:torch") return;
+    const place_block = block.dimension.getBlock(add(block.location, toVector(blockFace)));
+    event.cancel = place_block.isLiquid;
+}
+
 
 world.afterEvents.playerBreakBlock.subscribe(alterBlock);
 world.afterEvents.playerInteractWithBlock.subscribe(event => {
