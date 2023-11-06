@@ -8,7 +8,7 @@
 				"enchanted": "entity_alphatest_glint"
 			},
 			"textures": {
-				"default": "textures/blocks/torch_on",
+				"default": "textures/entity/torch",
 				"enchanted": "textures/misc/enchanted_item_glint"
 			},
 			"geometry": { "default": "geometry.ofht.torch" },
