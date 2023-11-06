@@ -3,7 +3,7 @@
 	"metadata": { "authors": ["ItsDrCat", "MADLAD3718"] },
 	"header": {
 		"name": "Offhand Torches RTX",
-		"description": "An addon implementing custom torches that remain functional while held in the offhand.",
+		"description": "An addon that replaces vanilla torches with custom torches that can be held in the offhand.\nCreated by ItsDrCat and MADLAD3718!",
 		"min_engine_version": [1,20,40],
 		"uuid": "e9cb50c1-bbe9-489a-8faf-7fdb42e04fa3",
 		"version": [1,0,0]
