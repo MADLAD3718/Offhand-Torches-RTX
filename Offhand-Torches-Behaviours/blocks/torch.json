@@ -26,7 +26,8 @@
                         "interval_range": [20,40],
                         "looping": true,
                         "on_tick": { "event": "ofht:emit_flame_north" }
-                    }
+                    },
+                    "minecraft:on_placed":{ "event" : "ofht:emit_flame_north" }
                 }
             },
             {
@@ -42,7 +43,8 @@
                         "interval_range": [20,40],
                         "looping": true,
                         "on_tick": { "event": "ofht:emit_flame_south" }
-                    }
+                    },
+                    "minecraft:on_placed":{ "event" : "ofht:emit_flame_south" }
                 }
             },
             {
@@ -58,7 +60,8 @@
                         "interval_range": [20,40],
                         "looping": true,
                         "on_tick": { "event": "ofht:emit_flame_east" }
-                    }
+                    },
+                    "minecraft:on_placed":{ "event" : "ofht:emit_flame_east" }
                 }
             },
             {
@@ -74,7 +77,8 @@
                         "interval_range": [20,40],
                         "looping": true,
                         "on_tick": { "event": "ofht:emit_flame_west" }
-                    }
+                    },
+                    "minecraft:on_placed":{ "event" : "ofht:emit_flame_west" }
                 }
             }
         ],
@@ -207,7 +211,8 @@
                 "interval_range": [20,40],
                 "looping": true,
                 "on_tick": { "event": "ofht:emit_flame" }
-            }
+            },
+            "minecraft:on_placed":{ "event" : "ofht:emit_flame" }
         },
         "events": {
             "ofht:emit_flame": {
