@@ -23,6 +23,28 @@
             "version": [1,0,0]
         }
     ],
+    "subpacks": [
+        {
+            "folder_name": "block_replacement",
+            "name": "Block Replacement",
+            "memory_tier": 0
+        },
+        {
+            "folder_name": "item_replacement",
+            "name": "Item Replacement",
+            "memory_tier": 0
+        }
+    ],
+    "settings": [
+        {
+            "type": "label",
+            "text": "In Item Replacement mode, the addon with check through player's inventories for when they've picked up a vanilla torch, replacing it with a custom one. Torches that already existed in the world or that were generated in vanilla structures will have to be broken and replaced to gain new functionality."
+        },
+        {
+            "type": "label",
+            "text": "In Block Replacement mode, the addon will search though all chunks surrounding each player, replacing vanilla torches with custom ones if it finds any. Torches that already existed in the world or were generated in vanilla structures will be replaced with custom ones automatically. Keep in mind that this mode has a small effect on server performance."
+        }
+    ],
     "dependencies": [
         {
             "uuid": "e9cb50c1-bbe9-489a-8faf-7fdb42e04fa3",
