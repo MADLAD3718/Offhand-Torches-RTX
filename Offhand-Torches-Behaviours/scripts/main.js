@@ -1,8 +1,18 @@
-import { Block, ItemStack, world, PlayerBreakBlockAfterEvent, PlayerInteractWithBlockAfterEvent, ItemUseOnBeforeEvent } from "@minecraft/server";
+import { Block, ItemStack, world, PlayerBreakBlockAfterEvent, PlayerInteractWithBlockAfterEvent, ItemUseOnBeforeEvent, system, EntityInventoryComponent, Container } from "@minecraft/server";
 import { add, toVec3, toVector } from "./vectors";
-import { filterChunks } from "./chunk_filter";
 
-filterChunks();
+system.runInterval(replaceTorches);
+function replaceTorches() {
+    for (const player of world.getAllPlayers()) {
+        /** @type {Container} */
+        const container = player.getComponent(EntityInventoryComponent.componentId).container;
+        for (let slot = 0; slot < container.size; ++slot) {
+            const item = container.getItem(slot);
+            if (item?.typeId == "minecraft:torch")
+                container.setItem(slot, new ItemStack("ofht:torch", item.amount));
+        }
+    }
+}
 
 world.beforeEvents.itemUseOn.subscribe(filterTorchPlacement);
 /** @param {ItemUseOnBeforeEvent} event  */
@@ -12,7 +22,6 @@ function filterTorchPlacement(event) {
     const place_block = block.dimension.getBlock(add(block.location, toVector(blockFace)));
     event.cancel = place_block.isLiquid;
 }
-
 
 world.afterEvents.playerBreakBlock.subscribe(alterBlock);
 world.afterEvents.playerInteractWithBlock.subscribe(event => {
