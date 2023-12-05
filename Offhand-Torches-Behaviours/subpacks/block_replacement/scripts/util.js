@@ -1,6 +1,7 @@
 /** @typedef {{x: Number, y: Number, z: Number}} Vector3 */
 /** @typedef {{from: Vector3, to: Vector3}} BlockVolume */
 
+import { CHUNK_SIZE } from "./main";
 import { add, mul, sub, toVec3 } from "./vectors";
 import { Direction } from "@minecraft/server";
 
@@ -23,10 +24,10 @@ export function createVolumeFromCenter(center, span) {
  * @returns {BlockVolume}
  */
 export function chunkToBlockVolume(chunk) {
-    const origin = mul(chunk, 16);
+    const origin = mul(chunk, CHUNK_SIZE);
     return {
         from: origin,
-        to: add(origin, toVec3(15))
+        to: add(origin, toVec3(CHUNK_SIZE - 1))
     }
 }
 

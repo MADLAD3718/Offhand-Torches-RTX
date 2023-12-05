@@ -38,7 +38,7 @@
     "settings": [
         {
             "type": "label",
-            "text": "In Item Replacement mode, the addon with check through player's inventories for when they've picked up a vanilla torch, replacing it with a custom one. Torches that already existed in the world or that were generated in vanilla structures will have to be broken and replaced to gain new functionality."
+            "text": "In Item Replacement mode, the addon with check through player's inventories for when they've picked up a vanilla torch, replacing it with a custom one."
         },
         {
             "type": "label",

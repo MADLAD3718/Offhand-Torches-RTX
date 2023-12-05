@@ -1,6 +1,7 @@
 import { BlockPermutation, BlockVolumeUtils, system, world } from "@minecraft/server";
 import { chunkToBlockVolume, createVolumeFromCenter, torchDirectionToBlockFace } from "./util";
-import { div, floor } from "./vectors";
+import { div, floor, mul } from "./vectors";
+import { CHUNK_SIZE } from "./main";
 
 const overworld = world.getDimension("overworld");
 
@@ -10,9 +11,9 @@ const checked = new Set;
  */
 export async function filterChunks() {
     for (const player of world.getAllPlayers()) {
-        if (player.dimension.id != "minecraft:overworld") continue;
-        const center_chunk = floor(div(player.location, 16));
-        const chunk_span = {x: 3, y: 1, z: 3};
+        if (player?.dimension.id != "minecraft:overworld") continue;
+        const center_chunk = floor(div(player.location, CHUNK_SIZE));
+        const chunk_span = mul({x: 3, y: 1, z: 3}, 16 / CHUNK_SIZE);
         const chunk_volume = createVolumeFromCenter(center_chunk, chunk_span);
         for (const chunk of BlockVolumeUtils.getBlockLocationIterator(chunk_volume)) {
             const {x,y,z} = chunk;
@@ -33,7 +34,7 @@ function filterChunk(chunk) {
         const volume = chunkToBlockVolume(chunk);
         for (const location of BlockVolumeUtils.getBlockLocationIterator(volume)) {
             const block = overworld.getBlock(location);
-            if (block == undefined) return resolve();
+            if (!block) return resolve();
             if (block.typeId != "minecraft:torch") continue;
             const direction = block.permutation.getState("torch_facing_direction");
             const permutation = BlockPermutation.resolve("ofht:torch_block", {
