@@ -8,6 +8,10 @@ function replaceTorches() {
             const item = container.getItem(slot);
             if (item?.typeId == "minecraft:torch")
                 container.setItem(slot, new ItemStack("ofht:torch", item.amount));
+            if (item?.typeId == "minecraft:soul_torch")
+                container.setItem(slot, new ItemStack("ofht:soul_torch", item.amount));
+            if (item?.typeId == "minecraft:redstone_torch")
+                container.setItem(slot, new ItemStack("ofht:redstone_torch", item.amount));
         }
     }
 }
