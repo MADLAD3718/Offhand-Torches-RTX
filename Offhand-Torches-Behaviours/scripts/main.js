@@ -1,9 +1,8 @@
-import { ItemStack, world, system, EntityInventoryComponent, Container } from "@minecraft/server";
+import { ItemStack, world, system, EntityInventoryComponent } from "@minecraft/server";
 
 system.runInterval(replaceTorches);
 function replaceTorches() {
-    for (const player of world.getAllPlayers()) {
-        /** @type {Container} */
+    for (const player of world.getAllPlayers()) if (player.isValid()) {
         const container = player.getComponent(EntityInventoryComponent.componentId).container;
         for (let slot = 0; slot < container.size; ++slot) {
             const item = container.getItem(slot);

@@ -23,7 +23,7 @@
             "version": [1,1,0]
         }
     ],
-    "subpacks": [
+    /* "subpacks": [
         {
             "folder_name": "block_replacement",
             "name": "Block Replacement",
@@ -44,7 +44,7 @@
             "type": "label",
             "text": "In Block Replacement mode, the addon will search though all chunks surrounding each player, replacing vanilla torches with custom ones if it finds any. Torches that already existed in the world or were generated in vanilla structures will be replaced with custom ones automatically. Keep in mind that this mode has a small effect on server performance."
         }
-    ],
+    ], */
     "dependencies": [
         {
             "uuid": "e9cb50c1-bbe9-489a-8faf-7fdb42e04fa3",
@@ -52,7 +52,7 @@
         },
         {
             "module_name": "@minecraft/server",
-            "version": "1.7.0-beta"
+            "version": "1.7.0"
         }
     ]
 }
