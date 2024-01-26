@@ -1,6 +1,8 @@
 {
     "resource_pack_name": "ofht",
     "texture_data": {
-        "torch": { "textures": "textures/blocks/torch_on" }
+        "torch": { "textures": "textures/blocks/torch_on" },
+        "soul_torch": { "textures": "textures/blocks/soul_torch" },
+        "redstone_torch": { "textures": "textures/blocks/redstone_torch_on" }
     }
 }

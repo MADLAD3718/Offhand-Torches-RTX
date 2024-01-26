@@ -1,2 +1,5 @@
 item.ofht:torch=Torch
+item.ofht:soul_torch=Soul Torch
+item.ofht:redstone_torch=Redstone Torch
+
 tile.ofht:torch_block.name=Torch Block
