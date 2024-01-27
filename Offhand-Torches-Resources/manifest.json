@@ -4,17 +4,17 @@
 	"header": {
 		"name": "Offhand Torches RTX",
 		"description": "An addon that replaces vanilla torches with custom torches that can be held in the offhand.\nCreated by ItsDrCat and MADLAD3718!",
-		"min_engine_version": [1,20,40],
+		"min_engine_version": [1,20,50],
 		"uuid": "e9cb50c1-bbe9-489a-8faf-7fdb42e04fa3",
-		"version": [1,1,0]
+		"version": [1,2,0]
 	},
 	"modules": [{
 		"type": "resources",
 		"uuid": "73f56bb9-5712-4b3e-98d4-de70d6bf2493",
-		"version": [1,1,0]
+		"version": [1,2,0]
 	}],
 	"dependencies": [{
 		"uuid": "cfeec682-d608-4565-b02c-06ab61707f88",
-		"version": [1,1,0]
+		"version": [1,2,0]
 	}]
 }
