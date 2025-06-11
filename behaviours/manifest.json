@@ -1,0 +1,39 @@
+{
+    "format_version": 2,
+	"metadata": {
+        "authors": ["ItsDrCat", "MADLAD3718"],
+        "product_type": "addon"
+    },
+    "header": {
+        "name": "Offhand Torches RTX",
+		"description": "An addon that replaces vanilla torches with custom torches that can be held in the offhand.\nCreated by ItsDrCat and MADLAD3718!",
+        "min_engine_version": [1,20,50],
+        "uuid": "cfeec682-d608-4565-b02c-06ab61707f88",
+        "version": [1,2,0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "593b01d4-f00b-47f9-9f9f-fa18c8838b84",
+            "version": [1,2,0]
+        },
+        {
+            "type": "script",
+            "description": "Offhand Torches RTX Script API Code",
+            "uuid": "e1837d4b-9221-4b25-a1e4-5337a9342db0",
+            "language": "javascript",
+            "entry": "scripts/main.js",
+            "version": [1,2,0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "e9cb50c1-bbe9-489a-8faf-7fdb42e04fa3",
+            "version": [1,2,0]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.0.0"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "offhand-torches-rtx",
+  "version": "1.0.0",
+  "description": "An addon implementing custom torches that remain functional while held in the offhand.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@madlad3718/mcveclib": "^0.3.2",
+    "@minecraft/server": "^2.1.0-rc.1.21.100-preview.20"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

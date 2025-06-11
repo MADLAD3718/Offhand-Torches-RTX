@@ -1,8 +1,0 @@
-{
-    "format_version": [1,0,0],
-    "point_lights": {
-        "colors": {
-            "ofht:torch_block": "#EFE39D"
-        }
-    }
-}
